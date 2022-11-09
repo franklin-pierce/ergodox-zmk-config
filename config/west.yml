@@ -1,15 +1,11 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: krikun98
-      url-base: https://github.com/krikun98
-    - name: ftc
-      url-base: https://github.com/ftc
+    - name: slicemk
+      url-base: https://github.com/slicemk
   projects:
     - name: zmk
-      remote: ftc
-      revision: mouse-ftc
+      remote: slicemk
+      revision: v20220912-mouse
       import: app/west.yml
   self:
     path: config
