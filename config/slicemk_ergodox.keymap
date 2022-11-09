@@ -2,8 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
-&mmv {    time-to-max-speed-ms = <500>;};
+
 
 
 / {
@@ -16,7 +15,7 @@
 				&kp TAB    &kp Q        &kp W        &kp E        &kp R        &kp T        &kp LC(LS(LA(T))) &kp RC(RS(RA(Y))) &kp Y             &kp U         &kp I        &kp O        &kp P                        &kp BSLH
 				&lt 1 ESC  &lt 1 A      &kp S        &kp D        &kp F        &kp G                                            &kp H             &kp J         &kp K        &kp L        &mt RG(RA(RSHIFT)) SEMICOLON &lt 3 APOS
 				&kp LSHIFT &kp Z        &kp X        &kp C        &kp V        &kp B        &out OUT_TOG      &kp LEFT_BRACKET  &kp N             &kp M         &kp CMMA     &kp DOT      &lt 5 SLASH                  &mo 3
-				&kp LCTRL  &none        &none        &kp LALT     &kp LGUI                                                                        &kp RALT      &lt 2       &kp K_APP    &none                        &mo 5
+				&kp LCTRL  &none        &none        &kp LALT     &kp LGUI                                                                        &kp RALT      &tog 2       &kp K_APP    &none                        &mo 5
 				                                                               &kp LEFT     &kp RIGHT         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 				                                                  &kp SPACE    &kp ENTER    &kp UP            &none             &kp DEL           &kp BACKSPACE
 				                                                                            &kp DOWN          &none
@@ -33,18 +32,18 @@
 				                                                                                              &none                 &none            &none          &none
 				                                                                        &kp BACKSPACE         &kp DEL               &kp PGUP         &none          &kp LA(DEL) &kp LA(BACKSPACE)
 				                                                                                                                    &kp PGDN         &none
-			>;)))#
+			>;
 		};
 		layer_2 {
 			bindings = <
 				&bootloader
 				&none &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4 &bt BT_CLR           &to 0                &none &none        &none        &none        &none        &none
-				&none &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_9 &none           &none        &bt                  &none                &none &kp NUMBER_7 &mv MOVE_UP &kp NUMBER_9 &none        &none
-				&none &kp KP_NUMBER_4 &kp KP_NUMBER_2 &kp KP_NUMBER_6 &kp PLUS        &none                                                  &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp NUMBER_0 &kp BACKSPACE
+				&none &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_9 &none           &none        &bt                  &none                &none &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none        &none
+				&none &kp KP_NUMBER_4 &kp KP_NUMBER_2 &kp KP_NUMBER_6 &kp PLUS        &none                                                  &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0 &kp BACKSPACE
 				&none &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp DOT         &none        &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none        &none
 				&none &none           &none           &none           &kp KP_NUMLOCK                                                               &none        &none        &none        &none        &to 0
 				                                                                      &none        &none                &none                &none
-				                                                      &kp KP_NUMBER_5 &kp KP_SLASH &none                &none               &mkp LCLK &mkp RCLK
+				                                                      &kp KP_NUMBER_5 &kp KP_SLASH &none                &none                &none &none
 				                                                                                   &none                &none
 			>;
 		};
