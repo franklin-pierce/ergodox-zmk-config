@@ -2,6 +2,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
+
+&mmv {    time-to-max-speed-ms = <500>;};
 
 
 
@@ -13,7 +16,7 @@
 				&bootloader
 				&kp ESC    &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp PGUP          &kp PGDN          &kp NUMBER_6      &kp NUMBER_7  &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0                 &kp MINUS
 				&kp TAB    &kp Q        &kp W        &kp E        &kp R        &kp T        &kp LC(LS(LA(T))) &kp RC(RS(RA(Y))) &kp Y             &kp U         &kp I        &kp O        &kp P                        &kp BSLH
-				&lt 1 ESC  &lt 1 A      &kp S        &kp D        &kp F        &kp G                                            &kp H             &kp J         &kp K        &kp L        &mt RG(RA(RSHIFT)) SEMICOLON &lt 3 APOS
+				&lt 1 ESC  &kp A     	&kp S        &kp D        &kp F        &kp G                                            &kp H             &kp J         &kp K        &kp L        &mt RG(RA(RSHIFT)) SEMICOLON &lt 3 APOS
 				&kp LSHIFT &kp Z        &kp X        &kp C        &kp V        &kp B        &out OUT_TOG      &kp LEFT_BRACKET  &kp N             &kp M         &kp CMMA     &kp DOT      &lt 5 SLASH                  &mo 3
 				&kp LCTRL  &none        &none        &kp LALT     &kp LGUI                                                                        &kp RALT      &tog 2       &kp K_APP    &none                        &mo 5
 				                                                               &kp LEFT     &kp RIGHT         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
